@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="/static/images/download-removebg-preview.png">
+  <title>SVN Chaita</title>
+  
+  <style>
+    .main-div{
+      height: 80vh;
+      width: 100%;
+      display: flex;
+      border: gray 5px;
+      
+    }
+    .div1{
+      
+      width: 40%;
+      margin-top: 90px;
+      margin-left: 100px;
+      margin-bottom: 10px;
+    }
+    .div2{
+      
+      width: 55%;
+      margin-top: 90px;
+      margin-left: 10px;
+      margin-bottom: 10px;
+    }
+
+    .paragraph{
+      align-content: center;
+      font-weight: bolder;
+    }
+  </style>
+</head>
+
+<body>
+  {% extends 'school/homebase.html' %}
+  {% block content %}
+  <br>
+      
+
+      
+
+      <div class="main-div">
+        <div class="div1">
+          <img src="/static/images/welcometeacher.png" alt="">
+          <p class="paragraph">If you have Register Yet</p>
+          <a class="btn btn-primary btn-lg" href="teachersignup" role="button" style="margin-left: 36%;">Sign Up</a>
+        </div>
+        <div class="div2">
+          <img src="/static/images/background.jpg" style="margin-left: 20px;" alt="">
+          <p class="paragraph"><strong>Login</strong> to Work in our Environment</p>
+          <a class="btn btn-primary btn-lg" href="teacherlogin" role="button" style="margin-left: 45%;">Login</a>
+        </div>
+      </div>
+    {% endblock content %}
+</body>

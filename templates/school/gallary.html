@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Gallary  </title>
+  <link rel="icon" type="image/x-icon" href="/static/images/download-removebg-preview.png">
+  <style media="screen">
+    .jumbotron {
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+
+    .jumbotron h1 {
+      text-align: center;
+    }
+
+    .alert {
+      margin: 0px;
+    }
+
+    
+  
+  .img-gallary{
+    width: 80%;
+    margin: 100px auto 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 30px
+  }
+
+  .img-gallary img{
+    width: 100%;
+    cursor: pointer;
+  }
+
+  .img-gallary img:hover{
+    transform: scale(0.8) rotate(-15deg);
+    border-radius: 20px;
+    box-shadow: 0 32px 75px rgba(68,77,136,0.2);
+
+  }
+
+  .full-img{
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    margin-top: 70px;
+
+  }
+  .full-img img{
+    width: 90%;
+    max-width: 500px;
+  }
+
+  .full-img span{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+
+  }
+  </style>
+
+  <title></title>
+</head>
+
+<body>
+
+  {% include "school/navbar.html" %}
+  <br><br>
+  
+  <div class="full-img" id="fullImgBox">
+    <img src="/static/images/DSC_0054.JPG" alt="" id="fullImg">
+    <span onclick="closeFullImg()">x</span>
+  </div>
+  <div class="img-gallary">
+    <img src="/static/images/DSC_0054.JPG" onclick="openFullImg(this.src)" >
+    <img src="/static/images/DSC_0077.JPG" onclick="openFullImg(this.src)" >
+    <img src="/static/images/DSC_0084.JPG" onclick="openFullImg(this.src)">
+    <img src="/static/images/DSC_0094.JPG" onclick="openFullImg(this.src)">
+    <img src="/static/images/DSC_0106.JPG" onclick="openFullImg(this.src)">
+    <img src="/static/images/DSC_0114.JPG" onclick="openFullImg(this.src)">
+    <img src="/static/images/DSC_0124.JPG" onclick="openFullImg(this.src)">
+    <img src="/static/images/DSC_0137.JPG" onclick="openFullImg(this.src)">
+
+    <img src="/static/images/DSC_0138.JPG" onclick="openFullImg(this.src)">
+    <img src="/static/images/DSC_0164.JPG" onclick="openFullImg(this.src)">
+    <img src="/static/images/DSC_0166.JPG" onclick="openFullImg(this.src)">
+    <img src="/static/images/DSC_0106.JPG" onclick="openFullImg(this.src)"><br>
+    <img src="/static/images/DSC_0295.JPG" onclick="openFullImg(this.src)">
+    <img src="/static/images/DSC_0300.JPG" onclick="openFullImg(this.src)">
+  </div>
+  <script>
+    var fullImgBox = document.getElementById("fullImgBox");
+    var fullImg = document.getElementById("fullImg");
+
+    function openFullImg(pic){
+      fullImgBox.style.display="flex";
+      fullImg.src=pic;
+    }
+    function closeFullImg(){
+      fullImgBox.style.display = "none";
+    }
+  </script>
+  {% include "school/footer.html" %}
+</body>
+
+</html>

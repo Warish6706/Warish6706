@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+{% load widget_tweaks %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>SVN Chaita</title>
+  <link rel="icon" type="image/x-icon" href="/static/images/download-removebg-preview.png">
+  <link rel="stylesheet" type="text/css" href="/static/CSS/style.css" />
+
+  <style type="text/css">
+
+    .btnSubmit {
+      border: none;
+      border-radius: 1.5rem;
+      padding: 1%;
+      width: 20%;
+      cursor: pointer;
+      background: #0062cc;
+      color: #fff;
+    }
+  </style>
+
+
+
+
+
+
+</head>
+
+<body>
+  {% include "school/navbar.html" %}
+  <br>
+  <br>
+  <br><br>
+
+  <!--- signup page for teacher by admin(sumit)  ---------->
+
+
+  </form>
+
+  <br><br><br>
+  <div class="container" style="height: 60vh;">
+    <section id="content">
+      <form action="" method="post">
+        {% csrf_token %}
+        <h1>Login Form</h1>
+        <div>
+          {% render_field form.username class="form-control" placeholder="Username" %}
+        </div>
+        <div>
+          {% render_field form.password class="form-control" placeholder="Password" %}
+        </div>
+        <div>
+          <button type="submit" class="btnSubmit">Login</button>
+          
+          <div style="font-size: 20px;">Do not have Account ?<a href="adminsignup">Signup here</a></div>
+        </div>
+      </form><!-- form -->
+      
+    </section><!-- content -->
+  </div><!-- container -->
+  
+  {% include "school/footer.html" %}
+</body>
+
+</html>
